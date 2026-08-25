@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images" # Uploaded files will be stored here
+public_folder: "images"
+
+collections:
+  - name: "gallery"
+    label: "Media Gallery (Photos & Videos)"
+    folder: "content/gallery"
+    create: true
+    fields:
+      - {label: "Title / Caption", name: "title", widget: "string"}
+      - {label: "Upload Media (Photo or Video file)", name: "image", widget: "image"}
+      - {label: "Date", name: "date", widget: "datetime"}
