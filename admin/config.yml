@@ -1,16 +1,17 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: 24jj1a0457-boop/team-chhaava
   branch: main
 
-media_folder: "images" # Uploaded files will be stored here
-public_folder: "images"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "gallery"
-    label: "Media Gallery (Photos & Videos)"
-    folder: "content/gallery"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
     fields:
-      - {label: "Title / Caption", name: "title", widget: "string"}
-      - {label: "Upload Media (Photo or Video file)", name: "image", widget: "image"}
-      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
